@@ -1,0 +1,28 @@
+{
+  "root": "apps/ships-e2e",
+  "sourceRoot": "apps/ships-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/ships-e2e/cypress.json",
+        "devServerTarget": "ships:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "ships:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/ships-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["ships"]
+}
