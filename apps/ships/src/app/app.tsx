@@ -1,13 +1,11 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import styles from './app.module.css';
-import NxWelcome from './nx-welcome';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Starships from '../components/Starships';
 
 export function App() {
   return (
-    <>
-      <NxWelcome title="ships" />
-      <div />
-    </>
+    <Starships />
   );
 }
 

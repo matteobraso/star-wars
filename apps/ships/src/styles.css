@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+@import url(//db.onlinewebfonts.com/c/0c724f6aa457310440cf8949c615cbd7?family=Star+Jedi);
+h1,
+h2 {
+  font-family: 'Star Jedi', arial;
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@font-face {
+  font-family: 'Star Jedi';
+  src: url('https://db.onlinewebfonts.com/t/0c724f6aa457310440cf8949c615cbd7.eot');
+  src: url('https://db.onlinewebfonts.com/t/0c724f6aa457310440cf8949c615cbd7.eot?#iefix')
+      format('embedded-opentype'),
+    url('//db.onlinewebfonts.com/t/0c724f6aa457310440cf8949c615cbd7.woff2')
+      format('woff2'),
+    url('//db.onlinewebfonts.com/t/0c724f6aa457310440cf8949c615cbd7.woff')
+      format('woff'),
+    url('//db.onlinewebfonts.com/t/0c724f6aa457310440cf8949c615cbd7.ttf')
+      format('truetype'),
+    url('https://db.onlinewebfonts.com/t/0c724f6aa457310440cf8949c615cbd7.svg#Star Jedi')
+      format('svg');
+}
