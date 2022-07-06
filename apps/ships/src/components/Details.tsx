@@ -1,46 +1,23 @@
-import { ReactChild, ReactFragment, ReactPortal, useState } from "react";
+import { useState } from "react";
 import { Modal } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import TableHeadModal from "./TablHeadModal";
 
-export default function Details(
-  this: unknown,
+const Details = (
   props: {
     starship: {
-      name:
-        | boolean
-        | ReactChild
-        | ReactFragment
-        | ReactPortal
-        | null
-        | undefined;
-      cost_in_credits:
-        | boolean
-        | ReactChild
-        | ReactFragment
-        | ReactPortal
-        | null
-        | undefined;
-      cargo_capacity:
-        | boolean
-        | ReactChild
-        | ReactFragment
-        | ReactPortal
-        | null
-        | undefined;
-      length:
-        | boolean
-        | ReactChild
-        | ReactFragment
-        | ReactPortal
-        | null
-        | undefined;
-    };
+      name: string;
+      cost_in_credits: string;
+      cargo_capacity: string;
+      length: string
+      };
   }
-): JSX.Element {
+) => {
+
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
+  
   const handleShow = () => setShow(true);
 
   return (
@@ -60,8 +37,8 @@ export default function Details(
             <h2>{props.starship.name}</h2>
           </Modal.Title>
         </Modal.Header>
-        <table className="table table-sm table-bordered table-hover">
-          <Modal.Body>
+        <Modal.Body>
+          <table className="table table-sm table-bordered table-hover">
             <TableHeadModal />
             <tbody>
               <tr>
@@ -81,14 +58,11 @@ export default function Details(
                 <td>{props.starship.length}</td>
               </tr>
             </tbody>
-          </Modal.Body>
-        </table>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Footer>
+          </table>
+        </Modal.Body>
       </Modal>
     </>
   );
-}
+};
+
+export default Details;

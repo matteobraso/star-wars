@@ -10,12 +10,12 @@ export interface iStarshipsState {
   starshipsArray: Starship[];
 }
 export interface Starship {
-  name: "string";
-  crew: "string";
-  passengers: "numbers";
-  cargo_capacity: "numbers";
-  cost_in_credits: "numbers";
-  length: "numbers";
+  name: string;
+  crew: string;
+  passengers: string;
+  cargo_capacity: string;
+  cost_in_credits: string;
+  length: string;
 }
 
 class Starships extends Component<iStarshipsProps, iStarshipsState> {
@@ -62,10 +62,10 @@ class Starships extends Component<iStarshipsProps, iStarshipsState> {
             {this.state.starshipsArray.map((starship, i) => {
               return (
                 <tr key={i + "starship"}>
-                  <td key={i + "name"}>{starship.name}</td>
-                  <td key={i + "passengers"}>{starship.passengers}</td>
-                  <td key={i + "crew"}>{starship.crew}</td>
-                  <td key={i + "details"}>
+                  <td>{starship.name}</td>
+                  <td>{starship.passengers}</td>
+                  <td>{starship.crew}</td>
+                  <td>
                     <Details starship={starship} />
                   </td>
                 </tr>
